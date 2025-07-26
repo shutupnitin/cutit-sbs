@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cutit.sbs — Your vibe. Your code.</title>
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.png" alt="cutit.sbs Logo">
+                cutit.sbs
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="premium.html">Premium</a></li>
+                    <li><a href="links.html">Links</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1>Your vibe.<br>Your code.</h1>
+                    <p class="tagline-subtext">Made by cutit sbs</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-gradient" id="createMyQRBtn">Create my QR</button>
+                        <button class="btn btn-glass" id="chatWithCutieBtn">Chat with Cutie</button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="assets/hero-anime-girl.png" alt="Anime girl illustration with peace sign">
+                </div>
+            </div>
+        </section>
+
+        <section class="qr-generator-section">
+            <div class="container">
+                <h2>Create your QR</h2>
+
+                <div class="qr-tabs">
+                    <button class="qr-tab active" data-tab="url">
+                        <span class="tab-icon">🌐</span> URL
+                    </button>
+                    <button class="qr-tab" data-tab="social">
+                        <span class="tab-icon">📱</span> Social
+                    </button>
+                    <button class="qr-tab" data-tab="wifi">
+                        <span class="tab-icon">📶</span> Wi-Fi
+                    </button>
+                    <button class="qr-tab" data-tab="ai-message">
+                        <span class="tab-icon">🧠</span> AI message
+                    </button>
+                    <button class="qr-tab" data-tab="private">
+                        <span class="tab-icon">🔒</span> Private
+                    </button>
+                    <button class="qr-tab" data-tab="one-time">
+                        <span class="tab-icon">⏳</span> One-time
+                    </button>
+                    <button class="qr-tab" data-tab="incognito">
+                        <span class="tab-icon">🕵️</span> Incognito
+                    </button>
+                </div>
+
+                <div class="qr-input-area active" id="qr-tab-url">
+                    <input type="text" id="qrDataInput" placeholder="https://example.com">
+                    <label for="qrDataInput">Theme</label>
+                    <select id="qrThemeSelector">
+                        <option value="minimal">Minimal</option>
+                        <option value="y2k">Y2K</option>
+                        <option value="anime-pastel">Anime Pastel</option>
+                        <option value="cyber-minimal">Cyber Minimal</option>
+                        <option value="kpop-neon">K-pop Neon</option>
+                    </select>
+                    <div class="color-palette">
+                        <div class="color-swatch active" data-color="255-157-228" style="background-color: #ff9de4;"></div>
+                        <div class="color-swatch" data-color="34-34-34" style="background-color: #222222;"></div>
+                        <div class="color-swatch" data-color="167-184-255" style="background-color: #a7b8ff;"></div>
+                        <div class="color-swatch" data-color="0-0-255" style="background-color: blue;"></div>
+                        <div class="color-swatch" data-color="0-128-0" style="background-color: green;"></div>
+                        <div class="color-swatch" data-color="255-255-0" style="background-color: yellow;"></div>
+                        <div class="color-swatch" data-color="255-165-0" style="background-color: orange;"></div>
+                        <button class="btn btn-surprise" id="surpriseMeBtn">Surprise Me</button>
+                    </div>
+                    <div class="qr-preview-box">
+                        <canvas id="qrCanvas" width="320" height="320" style="display: none;"></canvas>
+                        <img id="qrCodeImage" src="https://api.qrserver.com/v1/create-qr-code/?data=https://cutit.sbs&size=320x320" alt="Generated QR Code">
+                        <div class="qr-watermark" id="qrWatermarkText">made by cutit.sbs ✦ your vibe. your code.</div>
+                    </div>
+                    <div class="qr-actions">
+                        <button class="btn btn-download" id="downloadQrBtn">↓ Download PNG</button>
+                        <button class="btn btn-premium" id="getCleanQrBtn">₹1 Get Clean QR</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="theme-selector-section">
+            <div class="container">
+                 <div class="qr-theme-buttons">
+                    <button class="btn qr-theme-btn active" data-theme="minimal">Minimal</button>
+                    <button class="btn qr-theme-btn" data-theme="y2k">Y2K</button>
+                    <button class="btn qr-theme-btn" data-theme="anime-pastel">Anime Pastel</button>
+                    <button class="btn qr-theme-btn" data-theme="cyber-minimal">Cyber Minimal</button>
+                    <button class="btn qr-theme-btn" data-theme="kpop-neon">K-pop Neon</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <p>"Made with love by Team cutit.sbs ✦ your vibe. your code."</p>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="premium.html">Premium</a></li>
+                <li><a href="links.html">Links</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="terms.html">Terms</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <div class="chat-bubble" id="chatBubble">
+        💬
+    </div>
+
+    <div class="chat-panel" id="chatPanel">
+        <div class="chat-header">
+            <h3>Chat with Cutie</h3>
+            <span class="close-chat" id="closeChat">&times;</span>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <div class="message cutie-message">Hey there, hottie! What's poppin'? Ready to make some magic? ✨</div>
+        </div>
+        <div class="chat-input-area">
+            <input type="text" id="chatInput" placeholder="Ask Cutie anything...">
+            <button id="sendChatBtn">Send</button>
+        </div>
+    </div>
+
+    <div class="version-bubble" id="versionBubble">
+        v8
+    </div>
+
+    <div class="modal" id="versionModal">
+        <div class="modal-content">
+            <span class="close-button" id="closeVersionModal">&times;</span>
+            <p>You’re on v8 — Pastel Anime Edition. Upcoming features: Secret Crush QR, analytics, premium frames, editable private QRs.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="cutie.js"></script>
+    <script src="razorpay.js"></script>
+</body>
+</html>
