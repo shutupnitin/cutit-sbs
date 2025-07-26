@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Abstract Q form with negative space technique -->
+  <path fill="#0A1A3A" d="M50,15a35,35 0 1,0 0,70 35,35 0 1,0 0,-70z"/>
+  
+  <!-- Dynamic tail element (inspired by quill/connection) -->
+  <path fill="#FFD166" d="M65,50 
+                         C75,45 85,60 80,65 
+                         C75,70 70,65 65,65 
+                         C60,65 55,55 65,50z"/>
+  
+  <!-- Precision dot (dual-meaning: tech node/artistic point) -->
+  <circle cx="82" cy="58" r="3" fill="#0A1A3A"/>
+</svg>
