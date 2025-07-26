@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy-ish — cutit.sbs</title>
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.png" alt="cutit.sbs Logo">
+                cutit.sbs
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="premium.html">Premium</a></li>
+                    <li><a href="links.html">Links</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="privacy.html" class="active">Privacy</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-section privacy-section">
+            <div class="container">
+                <h1>Privacy-ish (aka How We Handle Your Info)</h1>
+                <p class="privacy-intro">Alright, let's talk privacy. We're not into being creepy or hoarding your data. Here’s the simple truth about what we collect and why, in terms even your pet rock can understand.</p>
+
+                <h2>1. What We Collect (and why):</h2>
+                <ul>
+                    <li><strong>QR Code Data:</strong> When you type something to generate a QR, that data goes to the QR API (`qrserver.com`) to make your cool code. We don't store the content of your QR codes on our servers after generation. It's like a fleeting thought – here one second, gone the next, once the QR is made.</li>
+                    <li><strong>Total QRs Generated (Local):</strong> We use your browser's `localStorage` to keep a count of how many QRs *you* have generated. This count is only on *your device* and helps us show you your personal stats. We don't see or track this from our side.</li>
+                    <li><strong>Payment Info (Premium):</strong> If you opt for the ₹1 Premium, your payment details are handled securely by Razorpay, our trusted payment partner. We don't see or store your credit card numbers or banking details. We only get a confirmation that you've paid.</li>
+                    <li><strong>Basic Website Analytics:</strong> We might use simple, privacy-friendly analytics to see how many people visit our site and which pages are popular. This helps us make cutit.sbs even better for you. We aim for aggregated, anonymous data, not personal spying.</li>
+                </ul>
+
+                <h2>2. What We DON'T Do:</h2>
+                <ul>
+                    <li>❌ We don't sell your data to anyone. Gross!</li>
+                    <li>❌ We don't track your every move across the internet.</li>
+                    <li>❌ We don't collect personal info unless you explicitly give it to us (like your email if you contact us).</li>
+                </ul>
+
+                <h2>3. Cookies? Maybe Just for Snacks.</h2>
+                <p>We keep our use of cookies minimal. They might be used for basic site functionality (like remembering your preferences) or for our simple analytics (as mentioned above). No crumb-tracking here!</p>
+
+                <h2>4. Third-Party Links.</h2>
+                <p>Our site might have links to other cool places (like Instagram or YouTube). Once you click those, our privacy vibes don't apply anymore, so check theirs out!</p>
+
+                <h2>5. Keeping it Safe.</h2>
+                <p>We do our best to protect our site and your minimal data. But remember, no online service is 100% hacker-proof. Use common sense!</p>
+
+                <p class="privacy-outro">Basically, we value your privacy and aim to be transparent. We're here to help you create awesome QRs, not collect your life story. If you have any questions, hit us up at <a href="mailto:hello@cutit.sbs">hello@cutit.sbs</a>.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <p>"Made with love by Team cutit.sbs ✦ your vibe. your code."</p>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="premium.html">Premium</a></li>
+                <li><a href="links.html">Links</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="terms.html">Terms</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
